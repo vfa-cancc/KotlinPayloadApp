@@ -4,12 +4,12 @@
 ![画像1](/readme-img/001.png)
 
 ## 概要
-* [ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)の『プッシュ通知』機能とプッシュ通知を受信する際、プッシュ通知の『ペイロードデータを取得する』機能を実装したサンプルプロジェクトです
-* 簡単な操作ですぐに [ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)の機能を体験いただけます★☆
+* [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の『プッシュ通知』機能とプッシュ通知を受信する際、プッシュ通知の『ペイロードデータを取得する』機能を実装したサンプルプロジェクトです
+* 簡単な操作ですぐに [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の機能を体験いただけます★☆
 * このサンプルはAndroid 4以降に対応しています
 
 
-## ニフティクラウドmobile backendって何？？
+## ニフクラ mobile backendって何？？
 スマートフォンアプリのバックエンド機能（プッシュ通知・データストア・会員管理・ファイルストア・SNS連携・位置情報検索・スクリプト）が**開発不要**、しかも基本**無料**(注1)で使えるクラウドサービス！
 
 詳しくは[こちら](https://mbaas.nifcloud.com/price.htm)をご覧ください
@@ -18,7 +18,7 @@
 
 ## 動作環境
 
-* Android Studio ver. 2.1.2
+* Android Studio ver. 3.1
 * Android 6.0
  * このサンプルアプリは、プッシュ通知を受信する必要があるため実機ビルドが必要です
 
@@ -26,24 +26,24 @@
 
 ## プッシュ通知の仕組み
 
-* ニフティクラウドmobile backendのプッシュ通知は、各プラットフォームが提供している通知サービスを利用しています
+* ニフクラ mobile backendのプッシュ通知は、各プラットフォームが提供している通知サービスを利用しています
  * Androidの通知サービス __FCM（Firebase Cloud Messaging）__
 
  ![画像a1](/readme-img/a001.png)
 
  ※ FCMはGCM(Google Cloud Messaging)の新バージョンです。既にGCMにてプロジェクトの作成・GCMの有効化設定を終えている場合は、継続してご利用いただくことが可能です。新規でGCMをご利用いただくことはできませんので、あらかじめご了承ください。
 
-* 上図のように、アプリ（Android Studio）・サーバー（ニフティクラウドmobile backend）・通知サービス（FCM/GCM）の間でやり取りを行うため、認証が必要になります
+* 上図のように、アプリ（Android Studio）・サーバー（ニフクラ mobile backend）・通知サービス（FCM/GCM）の間でやり取りを行うため、認証が必要になります
  * 認証に必要なプッシュ通知のAPIキーおよびSenderIDは手順にて説明します。
 
 ## 手順
 ### 0.プッシュ通知機能を使うための準備
 
-ニフティクラウド mobile backendと連携させるためのAPIキーを取得する必要があります。 以下のドキュメントを参考に、FCMプロジェクトの作成とAPIキーの取得を行ってください。
+ニフクラ mobile backendと連携させるためのAPIキーを取得する必要があります。 以下のドキュメントを参考に、FCMプロジェクトの作成とAPIキーの取得を行ってください。
 
 __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/doc/current/tutorial/push_setup_android.html)__
 
-### 1. [ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)の準備
+### 1. [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の準備
 
 * 上記リンクから会員登録（無料）をします
 * 登録後、ログインをすると下図のように「アプリの新規作成」画面が出ますので、アプリを作成します
@@ -51,7 +51,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 ![画像3](/readme-img/mBassNewProject.png)
 
 * アプリ作成されると下図のような画面になります
-* この２種類のAPIキー（アプリケーションキーとクライアントキー）は先ほどインポートしたAndroidStudioで作成するAndroidアプリにニフティクラウドmobile backendの紐付けるため、あとで使います
+* この２種類のAPIキー（アプリケーションキーとクライアントキー）は先ほどインポートしたAndroidStudioで作成するAndroidアプリにニフクラ mobile backendの紐付けるため、あとで使います
 
 ![画像4](/readme-img/mBassAPIkey.png)
 
@@ -80,7 +80,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 ### 4. APIキーの設定
 
 * `MainActivity.kt`を編集します
-* 先程[ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)のダッシュボード上で確認したAPIキーを貼り付けます
+* 先程[ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボード上で確認したAPIキーを貼り付けます
 
 ![画像9](/readme-img/AndroidAPIkey.png)
 
@@ -107,14 +107,14 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 ![画像11](/readme-img/Action1.png)
 
 
-* [ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)のダッシュボードから「データストア (installationクラス(端末情報))」を確認してみましょう！
+* [ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボードから「データストア (installationクラス(端末情報))」を確認してみましょう！
 
 ![画像12](/readme-img/Action2.png)
 
 ### 7.プッシュ通知を送って、データを取得しましょう
 
 * まずはアプリを__起動した状態__でプッシュ通知を送ってみましょう！
-* [ニフティクラウドmobile backend](https://mbaas.nifcloud.com/)のダッシュボードで「プッシュ通知」＞「＋新しいプッシュ通知」をクリックします
+* [ニフクラ mobile backend](https://mbaas.nifcloud.com/)のダッシュボードで「プッシュ通知」＞「＋新しいプッシュ通知」をクリックします
 * プッシュ通知のフォームが開かれます
 * タイトル、メッセージ、JSON、URL（他も後ほど試してみてください）を入力してプッシュ通知を作成します
 
@@ -138,7 +138,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
  * サンプルプロジェクトに実装済みの内容
 
 ### ペイロードデータについて
-* ニフティクラウドmobile backendのダッシュボードで入力した内容は以下のようなJSONデータとして、Android端末に届きます
+* ニフクラ mobile backendのダッシュボードで入力した内容は以下のようなJSONデータとして、Android端末に届きます
 
 ```JSON
 {
@@ -155,7 +155,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 ### サンプルプロジェクトに実装済みの内容
 
 #### SDKのインポートと初期設定
-* ニフティクラウドmobile backend の[ドキュメント（クイックスタート）](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html#/Android/)をご用意していますので、ご活用ください
+* ニフクラ mobile backend の[ドキュメント（クイックスタート）](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_android.html#/Android/)をご用意していますので、ご活用ください
 
 #### ロジック
  * `activity_main.xml`でデザインを作成し、`MainActivity.kt`にロジックを書いています
@@ -252,4 +252,4 @@ public override fun onResume() {
 
 
 ## 参考
-* ニフティクラウドmobile backend の[ドキュメント（プッシュ通知（Android））](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html)をご用意していますので、ご活用ください
+* ニフクラ mobile backend の[ドキュメント（プッシュ通知（Android））](https://mbaas.nifcloud.com/doc/current/push/basic_usage_android.html)をご用意していますので、ご活用ください
