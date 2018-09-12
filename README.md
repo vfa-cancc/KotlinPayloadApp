@@ -162,7 +162,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
  * installationクラス(端末情報)が保存される処理は以下のように記述されます
  * アプリを再インストールした時に、端末のデバイストークンが重複した場合の処理を考慮した実装となっています。
 
-```java
+```kotlin
 //**************** APIキーの設定とSDKの初期化 **********************
  NCMB.initialize(this, "YOUR_APPLICATION_KEY", "YOUR_CLIENT_KEY")
 ```
@@ -181,7 +181,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 
 * `CustomGcmListenerService.kt` を作成します。以下のように実装されます。
 
-```java
+```kotlin
 class CustomGcmListenerService : NCMBFirebaseMessagingService() {
     private val TAG = "GcmService"
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
@@ -217,7 +217,7 @@ class CustomGcmListenerService : NCMBFirebaseMessagingService() {
 
 * 画面にデータを表示するために以下のように`MainActivity.kt`の`onResume`メソッドにて実装します。
 
-```java
+```kotlin
 public override fun onResume() {
         super.onResume()
         //**************** ペイロード、リッチプッシュを処理する ***************
