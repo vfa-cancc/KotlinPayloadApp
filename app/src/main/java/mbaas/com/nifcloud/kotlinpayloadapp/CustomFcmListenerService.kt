@@ -8,8 +8,8 @@ import org.json.JSONException
 import org.json.JSONObject
 
 
-class CustomGcmListenerService : NCMBFirebaseMessagingService() {
-    private val TAG = "GcmService"
+class CustomFcmListenerService : NCMBFirebaseMessagingService() {
+    private val TAG = "FcmService"
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (remoteMessage.data != null) {
             val data = Bundle()

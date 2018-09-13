@@ -62,9 +62,9 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 
 ![画像6](/readme-img/mBassPushEnv.png)
 
-## 2. [GitHub](https://github.com/NIFCloud-mbaas/KotlinPayloadApp)からサンプルプロジェクトのダウンロード
+## 2. [GitHub](https://github.com/NIFCloud-mbaas/KotlinPayloadApp)からサンプルプロジェクトのダウンロード
 
-* プロジェクトの[Githubページ](https://github.com/NIFCloud-mbaas/KotlinPayloadApp)から「Clone or download」＞「Download ZIP」をクリックします
+* プロジェクトの[Githubページ](https://github.com/NIFCloud-mbaas/KotlinPayloadApp)から「Clone or download」＞「Download ZIP」をクリックします
 * プロジェクトを解凍します
 
 ### 3. AndroidStudioでアプリを起動

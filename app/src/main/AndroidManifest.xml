@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService">
+        <service android:name="mbaas.com.nifcloud.kotlinpayloadapp.CustomFcmListenerService">
             <intent-filter>
             <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
