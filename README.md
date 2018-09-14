@@ -183,7 +183,7 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 
 ```kotlin
 class CustomFcmListenerService : NCMBFirebaseMessagingService() {
-    private val TAG = "GcmService"
+    private val TAG = "FcmService"
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (remoteMessage.data != null) {
             val data = Bundle()
