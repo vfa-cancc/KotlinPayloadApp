@@ -179,10 +179,10 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 </service>
 ```
 
-* `CustomGcmListenerService.kt` を作成します。以下のように実装されます。
+* `CustomFcmListenerService.kt` を作成します。以下のように実装されます。
 
 ```kotlin
-class CustomGcmListenerService : NCMBFirebaseMessagingService() {
+class CustomFcmListenerService : NCMBFirebaseMessagingService() {
     private val TAG = "GcmService"
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (remoteMessage.data != null) {
