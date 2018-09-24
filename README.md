@@ -169,9 +169,9 @@ __[mobile backendとFCMの連携に必要な設定](https://mbaas.nifcloud.com/d
 * `AndroidManifest.xml`のサービスを定義している部分を書き換えます。
 
 ```xml
-<service android:name="com.nifcloud.mbaas.core.NCMBFirebaseMessagingService">
+<service android:name="mbaas.com.nifcloud.kotlinpayloadapp.CustomFcmListenerService">
     <intent-filter>
-    <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
 </service>
 ```
